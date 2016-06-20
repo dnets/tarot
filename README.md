@@ -3,8 +3,8 @@
 ## jQuery-based tarot oracle and encyclopedia
 
 ## Screenshots
-![Organon spread](https://raw.githubusercontent.com/dnets/organon-js/master/img/small/screenshot-main.jpg)
-![Organon meaning](https://raw.githubusercontent.com/dnets/organon-js/master/img/small/screenshot-meaning.jpg)
+![Organon spread](https://raw.githubusercontent.com/dnets/organon-js/master/img/small/screenshot-main.png)
+![Organon meaning](https://raw.githubusercontent.com/dnets/organon-js/master/img/small/screenshot-meaning.png)
 
 ## What's used
 
@@ -37,4 +37,5 @@ gulp
 ## Acknowledgements
 
 Card meanings taken from Mark McElroy's public domain book [A Guide To Tarot Meanings](http://www.madebymark.com/) 
-Marseilles 18-century French tarot deck taken from [here](http://www.wischik.com/lu/tarot/)
+
+ 18-century Marseilles tarot deck taken from [here](http://www.wischik.com/lu/tarot/)
