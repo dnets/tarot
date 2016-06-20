@@ -7,7 +7,6 @@
 
 Spread | Card meaning
 ------ | ------------
-
 ![Organon spread](https://raw.githubusercontent.com/dnets/organon-js/master/img/screenshot-main.png) | ![Organon meaning](https://raw.githubusercontent.com/dnets/organon-js/master/img/screenshot-meaning.png)
 
 ## What's used
