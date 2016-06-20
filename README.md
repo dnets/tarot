@@ -1,6 +1,14 @@
 # The Organon - jQuery Edition
 
-## jQuery-based tarot oracle and encyclopedia
+## Description
+A jQuery-based tarot oracle and encyclopedia.
+
+## Features
+
+* 1, 2 and 3-card spreads
+* Fully animated randomized card dealing and reset
+* Detailed card descriptions on card click (via modals)
+* Card meaning encyclopedia
 
 ## Screenshots
 
