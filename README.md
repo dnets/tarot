@@ -5,7 +5,7 @@ A jQuery-based tarot oracle and encyclopedia.
 
 ## Features
 
-* 1, 2 and 3-card spreads
+* 1, 3 and 4-card spreads
 * Fully animated randomized card dealing and reset
 * Detailed card descriptions on card click (via modals)
 * Card meaning encyclopedia
@@ -13,7 +13,7 @@ A jQuery-based tarot oracle and encyclopedia.
 ## Screenshots
 
 
-Spread | Card meaning
+Spread View | Card Modal
 ------ | ------------
 ![Organon spread](https://raw.githubusercontent.com/dnets/organon-js/master/img/screenshot-main.png) | ![Organon meaning](https://raw.githubusercontent.com/dnets/organon-js/master/img/screenshot-meaning.png)
 

@@ -2,10 +2,11 @@ body {
   margin: 0;
   padding: 0 !important;
   overflow-y: scroll;
-  color: #fffff0; }
+  color: #fffff0;
+  background: #FFF url("../img/bg-wood.jpg") 0 0 repeat;
+  background-size: cover; }
 
 .organon-table {
-  background: #FFF url("../img/bg-wood.jpg") 0 0 repeat-y;
   background-size: 100%; }
 
 .navbar {
