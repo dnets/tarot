@@ -1,0 +1,625 @@
+// The Organon jQuery tarot by Dmitry Nets (github.com/dnets)
+
+@import 'colors.scss';
+
+$spread-width: 960px;
+$spread-height: 700px;
+
+@mixin color-hover($fg:$cafe-noir,$fg-h:$ivory,$bg:$transparent,$bg-h:$transparent,$time:420ms) {
+  background: $bg;
+  color: $fg;
+  transition: color, $time;
+  &:hover {
+    background: $bg-h;
+    color: $fg-h;
+  }
+}
+
+@mixin card-3d-flip($x:0,$y:1,$z:0,$angle:180deg) {
+  transform: rotate3d($x,$y,$z,$angle);
+  transform: translate3d(0,0,2);
+}
+
+html {
+}
+body {
+  margin: 0;
+  padding: 0 !important;
+  overflow-y: scroll; 
+  color: $ivory;
+}
+
+.organon-table {
+  background: #FFF url('../img/bg-wood.jpg') 0 0 repeat-y;
+  background-size: 100%;
+}
+
+.navbar {
+  font-family: 'IM Fell English', serif;
+  font-size: 15px;
+  color: $cafe-noir;
+  background: $ivory;
+  border-top: none;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 5px 5px $cafe-noir;
+  li { text-decoration: none; float: none; display: inline-block; }
+  .navbar-nav {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-header{
+    position: absolute;
+    left: -10px;
+    width: 250px;
+    z-index: 100;
+    .navbar-brand {
+      position: absolute;
+      width: 250px;
+      z-index: 100;
+      width: 350px;
+      @include color-hover($cafe-noir,$cafe-au-lait);
+      .organon-brand-icon {
+        position: absolute;
+        top: 8px;
+        left: 37px;
+      }
+      .navbar-brand-heading {
+        cursor: pointer;
+        position: absolute;
+        top: 12px;
+        left: 75px;
+        color: $cafe-noir;
+        z-index: 101;
+      }
+      .navbar-caption {
+        cursor: pointer;
+        position: absolute;
+        top: 26px;
+        left: 85px;
+        font-family: 'Archivo Narrow', sans-serif;
+        color: $cafe-au-lait;
+        font-size: 13px;
+        z-index: 101;
+      }
+    }
+  }
+  .navbar-spread {
+    position: relative;
+    left: -15px;
+    li {
+      &.organon-spread-active a {
+        cursor: default;
+        color: $cafe-au-lait;
+      }
+      a {
+        position: relative;
+        top: -2px;
+        @include color-hover($cafe-noir,$cafe-au-lait);
+      }
+    }
+    .fa-arcanum {
+      position: relative;
+      font-size: 12px;
+      bottom: 2px;
+    }
+    .fa-book {
+      position: relative;
+      right: 4px;
+    }
+    .fa-key {
+      position: relative;
+      right: 2px;
+    }
+  }
+  .organon-menu-right {
+    position: absolute;
+    right: 15px;
+    top: 14px;
+    li a { text-decoration: none; float: none; display: inline-block; }
+    .organon-encyclopedia {
+      margin-top: 3px;
+      margin-left: 10px;
+      a { @include color-hover($dark-purple,$purple); }
+      i {
+        position: relative;
+        top: 0px;
+        right: 0px;
+        margin-right: 2px;
+      }
+    }
+    .organon-donate {
+      margin-top: 2px;
+      i {
+        position: relative;
+        bottom: 0px;
+        right: 2px;
+        margin-top: 2px;
+        margin-right: 2px;
+      }
+      a { @include color-hover($dark-gold,$gold); }
+    }
+  }
+}
+
+.organon-spread {
+  width: $spread-width !important;
+  height: $spread-height !important;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  ul { display: none; }
+  #organon-one-card-spread {
+    position: absolute;
+    top: 20px;
+    left: 404px;
+    margin: 0;
+    padding: 0;
+  }
+  #organon-three-card-spread {
+    position: absolute;
+    top: 20px;
+    left: 190px;
+    margin: 0;
+    padding: 0;
+  }
+  #organon-four-card-spread {
+    position: absolute;
+    top: 20px;
+    left: 83px;
+    margin: 0;
+    padding: 0;
+    .organon-reset { left: 320px; }
+  }
+  li {
+    &:first-child { margin-left: 0px; }
+    position: relative;
+    margin-top: 20px;
+    margin-left: 50px;
+    display: inline-block;
+    list-style: none;
+    img {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 160px;
+      height: 310px;
+      border-radius: 5px;
+      box-shadow: 7px 7px 5px $cafe-noir;
+    }
+    .empty { cursor:pointer; }
+    .organon-placeholder {
+      margin: 0;
+      padding: 0;
+      width: 160px;
+      height: 310px;
+      border: 5px solid $ivory;
+      border-radius: 8px;
+      @include color-hover($ivory,$cafe-noir,$transparent,$ivory);
+      text-align: center;
+      img { border-radius: 5px; }
+      .icon {
+        display: block;
+        margin-top: 80px;
+      }
+      .meaning {
+        display: block;
+        margin-top: 20px;
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.organon-card-holder {
+  display: none;
+  position: absolute;
+  margin: 0  !important;
+  padding: 0  !important;
+  width: 160px;
+  height: 310px;
+  background: $transparent;
+  z-index: 200;
+  left: 400px;
+  top: 40px;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+  .organon-card {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    backface-visibility: hidden;
+    img.organon-card-front, img.organon-card-back {
+      margin: 0;
+      padding: 0;
+      transform-style: preserve-3d;
+      border-radius: 5px;
+      width: 160px;
+      height: 310px;
+      box-shadow: 5px 5px 5px $near-transparent;
+    }
+    .organon-card-front {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include card-3d-flip($angle:180deg);
+      backface-visibility: hidden;
+      transition: all 1s;
+    }
+    .organon-card-back {
+      margin: 0;
+      padding: 0;
+      top: 0;
+      left: 0;
+      position: absolute;
+      backface-visibility: hidden;
+      @include card-3d-flip($angle:0deg);
+      transition: all 1s;
+    }
+    &.flipped {
+      .organon-card-front {
+        @include card-3d-flip($angle:0deg);
+      }
+      .organon-card-back {
+        @include card-3d-flip($angle:-180deg);
+      }
+    }
+  }
+}
+
+.organon-deck-stack {
+  position: absolute;
+  top: 40px;
+  left: 400px;
+  height: 310px;
+  width: 160px;
+  .organon-deck-clicker { cursor: pointer; }
+  .organon-deck-sleeve-1 {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+  }
+  .organon-deck-sleeve-2 {
+    position:absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 99;
+  }
+  .organon-deck-sleeve-3 {
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 98;
+  }
+  .organon-deck-sleeve-4 {
+    position:absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 97;
+  }
+  img {
+    width: 160px;
+    height: 310px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px $near-transparent;
+  }
+}
+
+.organon-reset {
+  font-family: 'Archivo Narrow', sans-serif;
+  display: none;
+  position: relative;
+  margin: 40px auto;
+  top: -20px;
+  width: 160px;
+  height: 40px;
+  background: $ivory;
+  border: 5px solid $ivory;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px $near-transparent;
+  cursor: pointer;
+  @include color-hover($cafe-noir,$cafe-au-lait,$ivory,$ivory);
+  i {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+  }
+  p {
+    margin-top: 3px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.modal-header, .modal-body, .modal-footer {
+  background: $ivory;
+  border-radius: 6px;
+}
+
+#cardModal, #encyclopedia {
+  cursor: default;
+  overflow-y: auto;
+  font-family: 'Archivo Narrow', sans-serif;
+  color: $cafe-noir;
+  .modal-header {
+    border-bottom: 1px solid $cafe-noir;
+    /* border-bottom-left-radius:0px; */
+    /* border-bottom-right-radius:0px; */
+    #back-to-encyclopedia i,a{
+       @include color-hover($dark-purple,$purple);
+       text-decoration: none;
+    }
+    .close, .close span{
+      opacity: .8;
+      color: $cafe-noir;
+      transition: opacity 400ms;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    h4 {
+      font-family: 'IM Fell English', serif;
+      font-size: 25px;
+      text-align: center;
+    }
+    ul.modal-keywords, ul.encyclopedia-list-trumps,
+    ul.encyclopedia-list-wands, ul.encyclopedia-list-cups,
+    ul.encyclopedia-list-swords, ul.encyclopedia-list-coins {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      li {
+        font-size: 14px;
+        display: inline-block;
+        list-style: none;
+        padding-left: 9px;
+        i {
+          font-size: 5px;
+          position: relative;
+          top: -1px;
+          white-space: nowrap;
+          padding-right: 3px;
+        }
+      }
+    }
+  }
+  span {
+      cursor: default;
+      color: $cafe-noir;
+    p {
+      margin-bottom: 0;
+    }
+    .modal-heading {
+      float: left;
+      font-weight: bold;
+      padding-right: 5px;
+      padding-left: 2px;
+      i {
+        width: 18px;
+        position: relative;
+        top: -1px;
+      }
+      span.fa-arcanum {
+        width: 18px;
+        height: 10px;
+        position: relative;
+        top: -7px;
+        left: -3px;
+        margin-right: 0;
+        padding-right: 0;
+        .fa-sun-o {
+          font-size: 22px;
+          font-weight: normal;
+          padding-right: 0;
+        }
+        .fa-eye {
+          position: absolute;
+          font-size: 15px;
+          top: -4px;
+          left: 2px!important;
+        }
+      }
+      .fa-fire {
+        font-weight: bold;
+        padding-left: 1px;
+      }
+      .fa-header {
+        font-weight: bold;
+        padding-left: 0px;
+      }
+      .fa-user {
+        padding-left: 1px;
+      }
+      .fa-mercury {
+        font-weight: bold;
+        padding-left: 2px;
+      }
+      .fa-moon-o {
+        font-weight: bold;
+        padding-left: 2px;
+      }
+      .fa-sun-o {
+        font-weight: bold;
+      }
+      .fa-child {
+        font-weight: bold;
+        padding-left: 2px;
+      }
+      /* span.fa-stack { */
+        /* clear: both; */
+        /* font-weight: normal; */
+      /* } */
+    }
+    .modal-description {
+      padding-bottom: 5px;
+    }
+  }
+  .modal-affirmation {
+    .modal-description {
+      font-style: italic;
+    }
+  }
+  .modal-image {
+    float: left;
+    margin-right: 8px;
+    border-radius: 5px;
+    height: 310px;
+    width: 160px;
+    box-shadow: 2px 2px 2px $cafe-noir;
+  }
+  .modal-questions {
+    text-align: left;
+    ul {
+      padding: 0;
+      margin-top: 25px;
+      li {
+        display: block;
+        list-style: none;
+        font-size: 14px;
+        padding-left: 20px;
+        font-style: italic;
+        i {
+          font-size: 5px;
+          position: relative;
+          top: -1px;
+          padding-right: 3px;
+        }
+      }
+    }
+  }
+  .modal-symbols {
+    border-collapse:separate;
+    &tr:last-child td {
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+    border-radius: 5px;
+    border: 2px solid $cafe-au-lait;
+    td,th { border: none; }
+    th {
+      .fa-key {
+        padding-right: 5px;
+      }
+      background: $cafe-au-lait;
+      color: $ivory;
+      font-weight: bold;
+      /* text-shadow: 2px 2px 0px $cafe-au-lait; */
+    }
+    tr {
+      background: $ivory;
+      &:nth-child(2n) {
+        color: $cafe-noir;
+        background: $cafe-creme-de-la-creme;
+      }
+      td {
+        &:nth-child(2n+1) {
+          border-left: none;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  .modal-footer {
+    clear: both;
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+    .credits {
+      margin-top: 7px;
+      margin-left: 5px;
+      float: left;
+      font-style: italic;
+    }
+    button {
+      border: 1px solid $cafe-au-lait;
+      /* width: 100%; */
+      color: $cafe-noir;
+      background: $ivory;
+      transition: color 400ms 100ms, background 400ms;
+      &:hover {
+        background: $cafe-au-lait;
+        color: $ivory;
+      }
+    }
+    .btn-back-to-encyclopedia {
+      border: 1px solid $dark-purple;
+      /* width: 100%; */
+      color: $dark-purple;
+      background: $ivory;
+      transition: color 400ms 100ms, background 400ms;
+      &:hover {
+        background: $dark-purple;
+        color: $ivory;
+      }
+
+    }
+  }
+}
+
+#encyclopedia {
+  .modal-title {
+    color: $dark-purple;
+  }
+  .modal-header {
+    border-bottom: 1px solid $purple;
+
+  }
+  .modal-body {
+    ul {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      li {
+        font-size: 14px;
+        display: inline-block;
+        list-style: none;
+        padding-left: 9px;
+        i {
+          font-size: 5px;
+          position: relative;
+          top: -1px;
+          white-space: nowrap;
+          padding-right: 3px;
+        }
+      }
+    }
+  }
+  .modal-body .encyclopedia-list-trumps li a{
+      font-family: 'IM Fell English', serif;
+      font-size: 13px;
+      text-align: center;
+  }
+  .modal-body .encyclopedia-list {
+    h3 {
+      font-family: 'IM Fell English', serif;
+      font-size: 25px;
+      text-align: center;
+    }
+    li a {
+      text-decoration: none;
+      @include color-hover($cafe-noir,$cafe-au-lait);
+    }
+  }
+}
+.encyclopedia-list-wands {
+  li{
+    a{
+      color: #e00;
+    }
+  }
+}
+.modal.fade.in {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+

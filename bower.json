@@ -1,0 +1,25 @@
+{
+  "name": "nets-web-template",
+  "version": "1.6.6",
+  "authors": [
+    "Dmitry Nets <dmitrynets@gmail.com>"
+  ],
+  "description": "HTML5+SCSS+jQuery+Bootstrap Template",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.6"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.6"
+  }
+}

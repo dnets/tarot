@@ -1,0 +1,5 @@
+{
+  "script": {
+    "postinstall": "gulp inject-vendor"
+  }
+}

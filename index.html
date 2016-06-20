@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+ <!-- The Organon jQuery tarot by Dmitry Nets (github.com/dnets) -->
+<html>
+  <head>
+    <!-- bower:css -->
+    <!-- endbower -->
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width">-->
+    <title>The Organon - a modern tarot experience</title>
+    <!-- Bootstrap -->
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=IM+Fell+English' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,900,700,700italic|Abel|Josefin+Sans:400,400italic,300,600|Alegreya|Archivo+Narrow:400,400italic|Slabo+27px|Oswald:300,700|Titillium+Web:300,300italic,400,400italic,600,900|Crete+Round|Sintony' rel='stylesheet' type='text/css'>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- Local -->
+    <link rel="stylesheet" href="css/style.css" media="all">
+  </head>
+
+<body>
+<div class="container-fluid organon-table">
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <div class="navbar-brand">
+        <div class="organon-brand-icon">
+          <span class="fa-stack">
+            <i class="fa fa-sun-o fa-stack-2x"></i>
+            <i class="fa fa-eye fa-stack-1x"></i>
+          </span>
+        </div>
+        <p class="navbar-brand-heading">The Organon</p>
+        <p class="navbar-caption">a modern tarot experience</p>
+      </div>
+    </div>
+    <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-spread">
+        <li class="organon-spread-arcanum" data-spread=0> <a href="#">
+            <span class="fa-arcanum fa-stack">
+              <i class="fa fa-sun-o fa-stack-2x"></i>
+              <i class="fa fa-eye fa-lg fa-stack-1x"></i>
+            </span>
+            The Arcanum</a></li>
+        <li class="organon-spread-classic" data-spread=1><a href="#"><i class="fa fa-lg fa-book"></i>Three Card Classic</a></li>
+        <li class="organon-spread-key" data-spread=2><a href="#"><i class="fa fa-lg fa-key"></i>The Key</a></li>
+      </ul>
+        <ul class="organon-menu-right">
+          <li class="organon-encyclopedia" ><a href="#" data-toggle="modal" data-target="#encyclopedia"><i class="fa fa-university"></i>Encyclopedia</a></li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="container-fluid">
+    <div class="container organon-spread">
+      <div class="organon-spread-placeholders">
+        <ul id="organon-one-card-spread">
+          <li>
+            <div class="organon-placeholder organon-arcanum" data-cardno=1>
+              <span class="icon">
+                <span class="fa-stack fa-3x">
+                  <i class="fa fa-sun-o fa-stack-2x"></i>
+                  <i class="fa fa-eye fa-stack-1x"></i>
+                </span>
+              </span>
+              <span class="meaning">The Arcanum</span>
+            </div>
+          </li>
+          <div class="organon-reset"><i class="fa fa-lg fa-trash-o"></i><p>Reset</p></div>
+        </ul>
+
+        <ul id="organon-three-card-spread">
+          <li>
+            <div class="organon-placeholder" data-cardno=1>
+              <span class="icon"><div class="fa fa-5x fa-mail-reply"></div></span>
+              <span class="meaning">The Past</span>
+            </div>
+          </li>
+          <li>
+            <div class="organon-placeholder" data-cardno=2>
+              <span class="icon"><div class="fa fa-5x fa-globe"></div></span>
+              <span class="meaning">The Present</span>
+            </div>
+          </li>
+          <li>
+            <div class="organon-placeholder" data-cardno=3>
+              <span class="icon"><div class="fa fa-5x fa-mail-forward"></div></span>
+              <span class="meaning">The Future</span>
+            </div>
+          </li>
+          <div class="organon-reset"><i class="fa fa-lg fa-trash-o"></i><p>Reset</p></div>
+        </ul>
+
+        <ul id="organon-four-card-spread">
+          <li>
+            <div class="organon-placeholder" data-cardno=1>
+              <span class="icon"><div class="fa fa-5x fa-leaf"></div></span>
+              <span class="meaning">Receptive Forces</span>
+            </div>
+          </li>
+          <li>
+            <div class="organon-placeholder" data-cardno=2>
+              <span class="icon"><div class="fa fa-5x fa-crosshairs"></div></span>
+              <span class="meaning">The Object</span>
+            </div>
+          </li>
+          <li>
+            <div class="organon-placeholder" data-cardno=3>
+              <span class="icon"><div class="fa fa-5x fa-flash"></div></span>
+              <span class="meaning">Active Forces</span>
+            </div>
+          </li>
+          <li>
+            <div class="organon-placeholder" data-cardno=4>
+              <span class="icon"><i class="fa fa-5x fa-key"></i></span>
+              <span class="meaning">The Key</span>
+            </div>
+          </li>
+          <div class="organon-reset"><i class="fa fa-lg fa-trash-o"></i><p>Reset</p></div>
+        </ul>
+      </div>
+
+        <div class="organon-card-holder primal">
+          <div class="organon-card">
+            <img class="organon-card-front" src="./img/major13.jpg" alt="">
+            <img class="organon-card-back" src="./img/tarot-sleeve.png" alt="">
+          </div>
+        </div>
+
+        <div class="organon-deck-stack">
+          <div class="organon-deck-sleeve-1">
+            <img id="organon-deck-clicker" src="./img/tarot-sleeve.png">
+          </div>
+          <div class="organon-deck-sleeve-2">
+            <img class="" src="./img/tarot-sleeve.png">
+          </div>
+          <div class="organon-deck-sleeve-3">
+            <img class="" src="./img/tarot-sleeve.png">
+          </div>
+          <div class="organon-deck-sleeve-4">
+            <img class="" src="./img/tarot-sleeve.png">
+          </div>
+      </div>
+    </div>
+</section>
+</div>
+
+<!-- Card Modal -->
+<div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <a id="back-to-encyclopedia" href="#" data-dismiss="modal" data-toggle="modal" data-target="#encyclopedia"><i class="fa fa-lg fa-university"></i></a>
+        <h4 class="modal-title" id="myModalLabel">Card Title</h4>
+        <ul class="modal-keywords">
+        </ul>
+      </div>
+      <div class="modal-body">
+        <img class="modal-image" src="" alt=""></img>
+        <span class="modal-archetype"><p class="modal-heading"><i class="fa fa-user"></i>Archetype:</p><p class="modal-description"></p></span>
+        <span class="modal-numerology"><p class="modal-heading"><i class="fa fa-hashtag"></i>Numerology:</p><p class="modal-description"></p></span>
+        <span class="modal-hebrew"><p class="modal-heading"><i class="fa fa-header"></i>Hebrew Alphabet:</p><p class="modal-description"></p></span>
+        <span class="modal-elemental"><p class="modal-heading"><i class="fa fa-fire"></i>Elemental:</p><p class="modal-description"></p></span>
+        <span class="modal-astrology"><p class="modal-heading"><i class="fa fa-mercury"></i>Astrology:</p><p class="modal-description"></p></span>
+        <span class="modal-planetary"><p class="modal-heading"><i class="fa fa-mercury"></i>Planetary/Astrological/Elemental:</p><p class="modal-description"></p></span>
+        <span class="modal-mythical"><p class="modal-heading"><i class="fa fa-university"></i>Mythical/Spiritual:</p><p class="modal-description"></p></span>
+        <span class="modal-affirmation"><p class="modal-heading"><i class="fa fa-commenting"></i>Affirmation:</p><p class="modal-description"></p></span>
+        <span class="modal-personality"><p class="modal-heading"><i class="fa fa-user"></i>Personality:</p><p class="modal-description"></p></span>
+        <span class="modal-light"><p class="modal-heading"><i class="fa fa-sun-o"></i>Light:</p><p class="modal-description"></p></span>
+        <span class="modal-shadow"><p class="modal-heading"><i class="fa fa-moon-o"></i>Shadow:</p><p class="modal-description"></p></span>
+        <span class="modal-story"><p class="modal-heading"><i class="fa fa-book"></i>Story:</p><p class="modal-description"></p></span>
+        <span class="modal-relationships"><p class="modal-heading"><i class="fa fa-heart"></i>Relationships:</p><p class="modal-description"></p></span>
+        <span class="modal-work"><p class="modal-heading"><i class="fa fa-briefcase"></i>Work:</p><p class="modal-description"></p></span>
+        <span class="modal-spirituality"><p class="modal-heading">
+            <span class="fa-arcanum fa-stack">
+              <i class="fa fa-sun-o fa-stack-2x"></i>
+              <i class="fa fa-eye fa-lg fa-stack-1x"></i>
+            </span>
+          Spirituality:</p><p class="modal-description"></p></span>
+        <span class="modal-personal"><p class="modal-heading"><i class="fa fa-user-plus"></i>Personal Growth:</p><p class="modal-description"></p></span>
+        <span class="modal-fortune"><p class="modal-heading"><i class="fa fa-magic"></i>Fortune Telling:</p><p class="modal-description"></p></span>
+        <span class="modal-when"><p class="modal-heading"><i class="fa fa-clock-o"></i>When?</p><p class="modal-description"></p></span>
+        <span class="modal-questions"><p class="modal-heading"><i class="fa fa-question-circle"></i>Questions to Ask:</p><ul></ul></span>
+        <table class="modal-symbols table">
+          <thead>
+            <tr>
+              <th colspan="2"><i class="fa fa-lg fa-key"></i>Symbols and Insights</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <p class="credits">Design and programming by <a href="https://github.com/dnets/">Dmitry Nets</a></p>
+        <button type="button" class="btn btn-default btn-back-to-encyclopedia" href="#" data-dismiss="modal" data-toggle="modal" data-target="#encyclopedia"><i class="fa fa-university"></i>Back to Encyclopedia</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close Window</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Encyclopedia -->
+<div class="modal fade" id="encyclopedia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-university"></i>Encyclopedia</h4>
+      </div>
+      <div class="modal-body">
+        <div class="encyclopedia-list">
+          <h3 class="encyclopedia-list-heading">&#9819; Major Arcana</h3>
+          <ul class="encyclopedia-list-trumps"></ul>
+          <h3 class="encyclopedia-list-heading">Wands</h3>
+          <ul class="encyclopedia-list-wands"></ul>
+          <h3 class="encyclopedia-list-heading">Cups</h3>
+          <ul class="encyclopedia-list-cups"></ul>
+          <h3 class="encyclopedia-list-heading">Swords</h3>
+          <ul class="encyclopedia-list-swords"></ul>
+          <h3 class="encyclopedia-list-heading">Coins</h3>
+          <ul class="encyclopedia-list-coins"></ul>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p class="credits">Design and programming by <a href="https://github.com/dnets/">Dmitry Nets</a></p>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close Window</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<!-- endbower -->
+
+<!-- local -->
+<script src="./js/organon.js"></script>
+</body>
+</html>

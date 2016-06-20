@@ -1,0 +1,29 @@
+{
+  "id" : "0",
+  "img" : "major00.jpg",
+  "name" : "The ",
+  "suit": "Trump",
+  "number": "0",
+  "description": {
+    "keywords": ["","","","","","","",""],
+    "Light": "",
+    "Shadow" : "",
+    "Archetype" : "",
+    "Hebrew Alphabet" : "",
+    "Numbers" : "",
+    "Planetary/Astrological/Elemental" : "",
+    "Mythical/Spiritual" : "",
+    "Story" : "",
+    "Relationships" : "",
+    "Work" : "",
+    "Spirituality" : "",
+    "Personal Growth" : "",
+    "Fortune Telling" : "",
+    "Symbols and Insights" : {
+      "" : "",
+      "" : "",
+      "" : ""
+    },
+    "Questions to Ask" : ["","",""]
+  }
+}

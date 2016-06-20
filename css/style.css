@@ -1,0 +1,582 @@
+body {
+  margin: 0;
+  padding: 0 !important;
+  overflow-y: scroll;
+  color: #fffff0; }
+
+.organon-table {
+  background: #FFF url("../img/bg-wood.jpg") 0 0 repeat-y;
+  background-size: 100%; }
+
+.navbar {
+  font-family: 'IM Fell English', serif;
+  font-size: 15px;
+  color: #4b3621;
+  background: #fffff0;
+  border-top: none;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 5px 5px #4b3621; }
+  .navbar li {
+    text-decoration: none;
+    float: none;
+    display: inline-block; }
+  .navbar .navbar-nav {
+    position: absolute;
+    width: 100%;
+    text-align: center; }
+  .navbar .navbar-header {
+    position: absolute;
+    left: -10px;
+    width: 250px;
+    z-index: 100; }
+    .navbar .navbar-header .navbar-brand {
+      position: absolute;
+      width: 250px;
+      z-index: 100;
+      width: 350px;
+      background: transparent;
+      color: #4b3621;
+      -webkit-transition: color, 420ms;
+      transition: color, 420ms; }
+      .navbar .navbar-header .navbar-brand:hover {
+        background: transparent;
+        color: #a67b5b; }
+      .navbar .navbar-header .navbar-brand .organon-brand-icon {
+        position: absolute;
+        top: 8px;
+        left: 37px; }
+      .navbar .navbar-header .navbar-brand .navbar-brand-heading {
+        cursor: pointer;
+        position: absolute;
+        top: 12px;
+        left: 75px;
+        color: #4b3621;
+        z-index: 101; }
+      .navbar .navbar-header .navbar-brand .navbar-caption {
+        cursor: pointer;
+        position: absolute;
+        top: 26px;
+        left: 85px;
+        font-family: 'Archivo Narrow', sans-serif;
+        color: #a67b5b;
+        font-size: 13px;
+        z-index: 101; }
+  .navbar .navbar-spread {
+    position: relative;
+    left: -15px; }
+    .navbar .navbar-spread li.organon-spread-active a {
+      cursor: default;
+      color: #a67b5b; }
+    .navbar .navbar-spread li a {
+      position: relative;
+      top: -2px;
+      background: transparent;
+      color: #4b3621;
+      -webkit-transition: color, 420ms;
+      transition: color, 420ms; }
+      .navbar .navbar-spread li a:hover {
+        background: transparent;
+        color: #a67b5b; }
+    .navbar .navbar-spread .fa-arcanum {
+      position: relative;
+      font-size: 12px;
+      bottom: 2px; }
+    .navbar .navbar-spread .fa-book {
+      position: relative;
+      right: 4px; }
+    .navbar .navbar-spread .fa-key {
+      position: relative;
+      right: 2px; }
+  .navbar .organon-menu-right {
+    position: absolute;
+    right: 15px;
+    top: 14px; }
+    .navbar .organon-menu-right li a {
+      text-decoration: none;
+      float: none;
+      display: inline-block; }
+    .navbar .organon-menu-right .organon-encyclopedia {
+      margin-top: 3px;
+      margin-left: 10px; }
+      .navbar .organon-menu-right .organon-encyclopedia a {
+        background: transparent;
+        color: #6a3b60;
+        -webkit-transition: color, 420ms;
+        transition: color, 420ms; }
+        .navbar .organon-menu-right .organon-encyclopedia a:hover {
+          background: transparent;
+          color: #b665a4; }
+      .navbar .organon-menu-right .organon-encyclopedia i {
+        position: relative;
+        top: 0px;
+        right: 0px;
+        margin-right: 2px; }
+    .navbar .organon-menu-right .organon-donate {
+      margin-top: 2px; }
+      .navbar .organon-menu-right .organon-donate i {
+        position: relative;
+        bottom: 0px;
+        right: 2px;
+        margin-top: 2px;
+        margin-right: 2px; }
+      .navbar .organon-menu-right .organon-donate a {
+        background: transparent;
+        color: #886308;
+        -webkit-transition: color, 420ms;
+        transition: color, 420ms; }
+        .navbar .organon-menu-right .organon-donate a:hover {
+          background: transparent;
+          color: #daa520; }
+
+.organon-spread {
+  width: 960px !important;
+  height: 700px !important;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center; }
+  .organon-spread ul {
+    display: none; }
+  .organon-spread #organon-one-card-spread {
+    position: absolute;
+    top: 20px;
+    left: 404px;
+    margin: 0;
+    padding: 0; }
+  .organon-spread #organon-three-card-spread {
+    position: absolute;
+    top: 20px;
+    left: 190px;
+    margin: 0;
+    padding: 0; }
+  .organon-spread #organon-four-card-spread {
+    position: absolute;
+    top: 20px;
+    left: 83px;
+    margin: 0;
+    padding: 0; }
+    .organon-spread #organon-four-card-spread .organon-reset {
+      left: 320px; }
+  .organon-spread li {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 50px;
+    display: inline-block;
+    list-style: none; }
+    .organon-spread li:first-child {
+      margin-left: 0px; }
+    .organon-spread li img {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 160px;
+      height: 310px;
+      border-radius: 5px;
+      box-shadow: 7px 7px 5px #4b3621; }
+    .organon-spread li .empty {
+      cursor: pointer; }
+    .organon-spread li .organon-placeholder {
+      margin: 0;
+      padding: 0;
+      width: 160px;
+      height: 310px;
+      border: 5px solid #fffff0;
+      border-radius: 8px;
+      background: transparent;
+      color: #fffff0;
+      -webkit-transition: color, 420ms;
+      transition: color, 420ms;
+      text-align: center; }
+      .organon-spread li .organon-placeholder:hover {
+        background: #fffff0;
+        color: #4b3621; }
+      .organon-spread li .organon-placeholder img {
+        border-radius: 5px; }
+      .organon-spread li .organon-placeholder .icon {
+        display: block;
+        margin-top: 80px; }
+      .organon-spread li .organon-placeholder .meaning {
+        display: block;
+        margin-top: 20px;
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 18px; }
+
+.organon-card-holder {
+  display: none;
+  position: absolute;
+  margin: 0  !important;
+  padding: 0  !important;
+  width: 160px;
+  height: 310px;
+  background: transparent;
+  z-index: 200;
+  left: 400px;
+  top: 40px;
+  -webkit-perspective: 800px;
+  perspective: 800px; }
+  .organon-card-holder .organon-card {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
+    .organon-card-holder .organon-card img.organon-card-front, .organon-card-holder .organon-card img.organon-card-back {
+      margin: 0;
+      padding: 0;
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      border-radius: 5px;
+      width: 160px;
+      height: 310px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9); }
+    .organon-card-holder .organon-card .organon-card-front {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-transform: rotate3d(0, 1, 0, 180deg);
+              transform: rotate3d(0, 1, 0, 180deg);
+      -webkit-transform: translate3d(0, 0, 2);
+              transform: translate3d(0, 0, 2);
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      -webkit-transition: all 1s;
+      transition: all 1s; }
+    .organon-card-holder .organon-card .organon-card-back {
+      margin: 0;
+      padding: 0;
+      top: 0;
+      left: 0;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      -webkit-transform: rotate3d(0, 1, 0, 0deg);
+              transform: rotate3d(0, 1, 0, 0deg);
+      -webkit-transform: translate3d(0, 0, 2);
+              transform: translate3d(0, 0, 2);
+      -webkit-transition: all 1s;
+      transition: all 1s; }
+    .organon-card-holder .organon-card.flipped .organon-card-front {
+      -webkit-transform: rotate3d(0, 1, 0, 0deg);
+              transform: rotate3d(0, 1, 0, 0deg);
+      -webkit-transform: translate3d(0, 0, 2);
+              transform: translate3d(0, 0, 2); }
+    .organon-card-holder .organon-card.flipped .organon-card-back {
+      -webkit-transform: rotate3d(0, 1, 0, -180deg);
+              transform: rotate3d(0, 1, 0, -180deg);
+      -webkit-transform: translate3d(0, 0, 2);
+              transform: translate3d(0, 0, 2); }
+
+.organon-deck-stack {
+  position: absolute;
+  top: 40px;
+  left: 400px;
+  height: 310px;
+  width: 160px; }
+  .organon-deck-stack .organon-deck-clicker {
+    cursor: pointer; }
+  .organon-deck-stack .organon-deck-sleeve-1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100; }
+  .organon-deck-stack .organon-deck-sleeve-2 {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 99; }
+  .organon-deck-stack .organon-deck-sleeve-3 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 98; }
+  .organon-deck-stack .organon-deck-sleeve-4 {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 97; }
+  .organon-deck-stack img {
+    width: 160px;
+    height: 310px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9); }
+
+.organon-reset {
+  font-family: 'Archivo Narrow', sans-serif;
+  display: none;
+  position: relative;
+  margin: 40px auto;
+  top: -20px;
+  width: 160px;
+  height: 40px;
+  background: #fffff0;
+  border: 5px solid #fffff0;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  background: #fffff0;
+  color: #4b3621;
+  -webkit-transition: color, 420ms;
+  transition: color, 420ms; }
+  .organon-reset:hover {
+    background: #fffff0;
+    color: #a67b5b; }
+  .organon-reset i {
+    position: absolute;
+    top: 8px;
+    left: 15px; }
+  .organon-reset p {
+    margin-top: 3px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase; }
+
+.modal-header, .modal-body, .modal-footer {
+  background: #fffff0;
+  border-radius: 6px; }
+
+#cardModal, #encyclopedia {
+  cursor: default;
+  overflow-y: auto;
+  font-family: 'Archivo Narrow', sans-serif;
+  color: #4b3621; }
+  #cardModal .modal-header, #encyclopedia .modal-header {
+    border-bottom: 1px solid #4b3621;
+    /* border-bottom-left-radius:0px; */
+    /* border-bottom-right-radius:0px; */ }
+    #cardModal .modal-header #back-to-encyclopedia i, #cardModal .modal-header a, #encyclopedia .modal-header #back-to-encyclopedia i, #encyclopedia .modal-header a {
+      background: transparent;
+      color: #6a3b60;
+      -webkit-transition: color, 420ms;
+      transition: color, 420ms;
+      text-decoration: none; }
+      #cardModal .modal-header #back-to-encyclopedia i:hover, #cardModal .modal-header a:hover, #encyclopedia .modal-header #back-to-encyclopedia i:hover, #encyclopedia .modal-header a:hover {
+        background: transparent;
+        color: #b665a4; }
+    #cardModal .modal-header .close, #cardModal .modal-header .close span, #encyclopedia .modal-header .close, #encyclopedia .modal-header .close span {
+      opacity: .8;
+      color: #4b3621;
+      -webkit-transition: opacity 400ms;
+      transition: opacity 400ms;
+      cursor: pointer; }
+      #cardModal .modal-header .close:hover, #cardModal .modal-header .close span:hover, #encyclopedia .modal-header .close:hover, #encyclopedia .modal-header .close span:hover {
+        opacity: 1; }
+    #cardModal .modal-header h4, #encyclopedia .modal-header h4 {
+      font-family: 'IM Fell English', serif;
+      font-size: 25px;
+      text-align: center; }
+    #cardModal .modal-header ul.modal-keywords, #cardModal .modal-header ul.encyclopedia-list-trumps,
+    #cardModal .modal-header ul.encyclopedia-list-wands, #cardModal .modal-header ul.encyclopedia-list-cups,
+    #cardModal .modal-header ul.encyclopedia-list-swords, #cardModal .modal-header ul.encyclopedia-list-coins, #encyclopedia .modal-header ul.modal-keywords, #encyclopedia .modal-header ul.encyclopedia-list-trumps,
+    #encyclopedia .modal-header ul.encyclopedia-list-wands, #encyclopedia .modal-header ul.encyclopedia-list-cups,
+    #encyclopedia .modal-header ul.encyclopedia-list-swords, #encyclopedia .modal-header ul.encyclopedia-list-coins {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      text-align: center; }
+      #cardModal .modal-header ul.modal-keywords li, #cardModal .modal-header ul.encyclopedia-list-trumps li,
+      #cardModal .modal-header ul.encyclopedia-list-wands li, #cardModal .modal-header ul.encyclopedia-list-cups li,
+      #cardModal .modal-header ul.encyclopedia-list-swords li, #cardModal .modal-header ul.encyclopedia-list-coins li, #encyclopedia .modal-header ul.modal-keywords li, #encyclopedia .modal-header ul.encyclopedia-list-trumps li,
+      #encyclopedia .modal-header ul.encyclopedia-list-wands li, #encyclopedia .modal-header ul.encyclopedia-list-cups li,
+      #encyclopedia .modal-header ul.encyclopedia-list-swords li, #encyclopedia .modal-header ul.encyclopedia-list-coins li {
+        font-size: 14px;
+        display: inline-block;
+        list-style: none;
+        padding-left: 9px; }
+        #cardModal .modal-header ul.modal-keywords li i, #cardModal .modal-header ul.encyclopedia-list-trumps li i,
+        #cardModal .modal-header ul.encyclopedia-list-wands li i, #cardModal .modal-header ul.encyclopedia-list-cups li i,
+        #cardModal .modal-header ul.encyclopedia-list-swords li i, #cardModal .modal-header ul.encyclopedia-list-coins li i, #encyclopedia .modal-header ul.modal-keywords li i, #encyclopedia .modal-header ul.encyclopedia-list-trumps li i,
+        #encyclopedia .modal-header ul.encyclopedia-list-wands li i, #encyclopedia .modal-header ul.encyclopedia-list-cups li i,
+        #encyclopedia .modal-header ul.encyclopedia-list-swords li i, #encyclopedia .modal-header ul.encyclopedia-list-coins li i {
+          font-size: 5px;
+          position: relative;
+          top: -1px;
+          white-space: nowrap;
+          padding-right: 3px; }
+  #cardModal span, #encyclopedia span {
+    cursor: default;
+    color: #4b3621; }
+    #cardModal span p, #encyclopedia span p {
+      margin-bottom: 0; }
+    #cardModal span .modal-heading, #encyclopedia span .modal-heading {
+      float: left;
+      font-weight: bold;
+      padding-right: 5px;
+      padding-left: 2px;
+      /* span.fa-stack { */
+      /* clear: both; */
+      /* font-weight: normal; */
+      /* } */ }
+      #cardModal span .modal-heading i, #encyclopedia span .modal-heading i {
+        width: 18px;
+        position: relative;
+        top: -1px; }
+      #cardModal span .modal-heading span.fa-arcanum, #encyclopedia span .modal-heading span.fa-arcanum {
+        width: 18px;
+        height: 10px;
+        position: relative;
+        top: -7px;
+        left: -3px;
+        margin-right: 0;
+        padding-right: 0; }
+        #cardModal span .modal-heading span.fa-arcanum .fa-sun-o, #encyclopedia span .modal-heading span.fa-arcanum .fa-sun-o {
+          font-size: 22px;
+          font-weight: normal;
+          padding-right: 0; }
+        #cardModal span .modal-heading span.fa-arcanum .fa-eye, #encyclopedia span .modal-heading span.fa-arcanum .fa-eye {
+          position: absolute;
+          font-size: 15px;
+          top: -4px;
+          left: 2px !important; }
+      #cardModal span .modal-heading .fa-fire, #encyclopedia span .modal-heading .fa-fire {
+        font-weight: bold;
+        padding-left: 1px; }
+      #cardModal span .modal-heading .fa-header, #encyclopedia span .modal-heading .fa-header {
+        font-weight: bold;
+        padding-left: 0px; }
+      #cardModal span .modal-heading .fa-user, #encyclopedia span .modal-heading .fa-user {
+        padding-left: 1px; }
+      #cardModal span .modal-heading .fa-mercury, #encyclopedia span .modal-heading .fa-mercury {
+        font-weight: bold;
+        padding-left: 2px; }
+      #cardModal span .modal-heading .fa-moon-o, #encyclopedia span .modal-heading .fa-moon-o {
+        font-weight: bold;
+        padding-left: 2px; }
+      #cardModal span .modal-heading .fa-sun-o, #encyclopedia span .modal-heading .fa-sun-o {
+        font-weight: bold; }
+      #cardModal span .modal-heading .fa-child, #encyclopedia span .modal-heading .fa-child {
+        font-weight: bold;
+        padding-left: 2px; }
+    #cardModal span .modal-description, #encyclopedia span .modal-description {
+      padding-bottom: 5px; }
+  #cardModal .modal-affirmation .modal-description, #encyclopedia .modal-affirmation .modal-description {
+    font-style: italic; }
+  #cardModal .modal-image, #encyclopedia .modal-image {
+    float: left;
+    margin-right: 8px;
+    border-radius: 5px;
+    height: 310px;
+    width: 160px;
+    box-shadow: 2px 2px 2px #4b3621; }
+  #cardModal .modal-questions, #encyclopedia .modal-questions {
+    text-align: left; }
+    #cardModal .modal-questions ul, #encyclopedia .modal-questions ul {
+      padding: 0;
+      margin-top: 25px; }
+      #cardModal .modal-questions ul li, #encyclopedia .modal-questions ul li {
+        display: block;
+        list-style: none;
+        font-size: 14px;
+        padding-left: 20px;
+        font-style: italic; }
+        #cardModal .modal-questions ul li i, #encyclopedia .modal-questions ul li i {
+          font-size: 5px;
+          position: relative;
+          top: -1px;
+          padding-right: 3px; }
+  #cardModal .modal-symbols, #encyclopedia .modal-symbols {
+    border-collapse: separate;
+    border-radius: 5px;
+    border: 2px solid #a67b5b; }
+    #cardModal .modal-symbolstr:last-child td, #encyclopedia .modal-symbolstr:last-child td {
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px; }
+    #cardModal .modal-symbols td, #cardModal .modal-symbols th, #encyclopedia .modal-symbols td, #encyclopedia .modal-symbols th {
+      border: none; }
+    #cardModal .modal-symbols th, #encyclopedia .modal-symbols th {
+      background: #a67b5b;
+      color: #fffff0;
+      font-weight: bold;
+      /* text-shadow: 2px 2px 0px $cafe-au-lait; */ }
+      #cardModal .modal-symbols th .fa-key, #encyclopedia .modal-symbols th .fa-key {
+        padding-right: 5px; }
+    #cardModal .modal-symbols tr, #encyclopedia .modal-symbols tr {
+      background: #fffff0; }
+      #cardModal .modal-symbols tr:nth-child(2n), #encyclopedia .modal-symbols tr:nth-child(2n) {
+        color: #4b3621;
+        background: #ffd09e; }
+      #cardModal .modal-symbols tr td:nth-child(2n+1), #encyclopedia .modal-symbols tr td:nth-child(2n+1) {
+        border-left: none;
+        white-space: nowrap; }
+  #cardModal .modal-footer, #encyclopedia .modal-footer {
+    clear: both;
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0; }
+    #cardModal .modal-footer .credits, #encyclopedia .modal-footer .credits {
+      margin-top: 7px;
+      margin-left: 5px;
+      float: left;
+      font-style: italic; }
+    #cardModal .modal-footer button, #encyclopedia .modal-footer button {
+      border: 1px solid #a67b5b;
+      /* width: 100%; */
+      color: #4b3621;
+      background: #fffff0;
+      -webkit-transition: color 400ms 100ms, background 400ms;
+      transition: color 400ms 100ms, background 400ms; }
+      #cardModal .modal-footer button:hover, #encyclopedia .modal-footer button:hover {
+        background: #a67b5b;
+        color: #fffff0; }
+    #cardModal .modal-footer .btn-back-to-encyclopedia, #encyclopedia .modal-footer .btn-back-to-encyclopedia {
+      border: 1px solid #6a3b60;
+      /* width: 100%; */
+      color: #6a3b60;
+      background: #fffff0;
+      -webkit-transition: color 400ms 100ms, background 400ms;
+      transition: color 400ms 100ms, background 400ms; }
+      #cardModal .modal-footer .btn-back-to-encyclopedia:hover, #encyclopedia .modal-footer .btn-back-to-encyclopedia:hover {
+        background: #6a3b60;
+        color: #fffff0; }
+
+#encyclopedia .modal-title {
+  color: #6a3b60; }
+
+#encyclopedia .modal-header {
+  border-bottom: 1px solid #b665a4; }
+
+#encyclopedia .modal-body ul {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  text-align: center; }
+  #encyclopedia .modal-body ul li {
+    font-size: 14px;
+    display: inline-block;
+    list-style: none;
+    padding-left: 9px; }
+    #encyclopedia .modal-body ul li i {
+      font-size: 5px;
+      position: relative;
+      top: -1px;
+      white-space: nowrap;
+      padding-right: 3px; }
+
+#encyclopedia .modal-body .encyclopedia-list-trumps li a {
+  font-family: 'IM Fell English', serif;
+  font-size: 13px;
+  text-align: center; }
+
+#encyclopedia .modal-body .encyclopedia-list h3 {
+  font-family: 'IM Fell English', serif;
+  font-size: 25px;
+  text-align: center; }
+
+#encyclopedia .modal-body .encyclopedia-list li a {
+  text-decoration: none;
+  background: transparent;
+  color: #4b3621;
+  -webkit-transition: color, 420ms;
+  transition: color, 420ms; }
+  #encyclopedia .modal-body .encyclopedia-list li a:hover {
+    background: transparent;
+    color: #a67b5b; }
+
+.encyclopedia-list-wands li a {
+  color: #e00; }
+
+.modal.fade.in {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0); }
