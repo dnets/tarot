@@ -3,8 +3,8 @@
 ## jQuery-based tarot oracle and encyclopedia
 
 ## Screenshots
-![Organon spread](https://raw.githubusercontent.com/dnets/organon-js/master/img/small/screenshot-main.png)
-![Organon meaning](https://raw.githubusercontent.com/dnets/organon-js/master/img/small/screenshot-meaning.png)
+![Organon spread](https://raw.githubusercontent.com/dnets/organon-js/master/img/screenshot-main.png)
+![Organon meaning](https://raw.githubusercontent.com/dnets/organon-js/master/img/screenshot-meaning.png)
 
 ## What's used
 
