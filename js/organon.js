@@ -50,6 +50,7 @@ function drawCard(db, e, top, left) {
     card = deck.getCard();
   }
   cardholder.removeClass('primal');
+  e.removeClass('empty');
   cardholder.find('img.organon-card-front').attr({
     'src': './img/small/'+db[card].img,
     'data-toggle': 'modal',
@@ -65,7 +66,7 @@ function drawCard(db, e, top, left) {
       left: (left + (215 * (e.data('cardno')-1))-offset)
     });
     $.when(cardholder.find('.organon-card').addClass('flipped')).done(function() {
-      e.removeClass('empty');
+      return;
     });
   });
 }
