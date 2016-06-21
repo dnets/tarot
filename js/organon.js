@@ -56,15 +56,17 @@ function drawCard(db, e, top, left) {
     'data-target': '#cardModal',
     'data-card-id': card
   });
-  cardholder.show();
-  var offset = e.data('cardno')-1;
-  cardholder.appendTo($('.organon-spread'));
-  cardholder.animate({
-    top: top+20,
-    left: (left + (215 * (e.data('cardno')-1))-offset)
-  });
-  $.when(cardholder.find('.organon-card').addClass('flipped')).done(function() {
-    e.removeClass('empty');
+  cardholder.find('img.organon-card-front').on('load', function() {
+    cardholder.show();
+    var offset = e.data('cardno')-1;
+    cardholder.appendTo($('.organon-spread'));
+    cardholder.animate({
+      top: top+20,
+      left: (left + (215 * (e.data('cardno')-1))-offset)
+    });
+    $.when(cardholder.find('.organon-card').addClass('flipped')).done(function() {
+      e.removeClass('empty');
+    });
   });
 }
 
