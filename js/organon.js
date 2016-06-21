@@ -40,19 +40,6 @@ var deck = {
   }
 };
 
-function loadCards() {
-  var cards;
-  $.ajax({
-    url: 'tarot.json',
-    dataType: 'text',
-    async: false,
-    success: function(data) {
-      cards = $.parseJSON(data);
-    }
-  });
-  return cards;
-}
-
 function drawCard(db, e, top, left) {
   console.log(e.parent().parent().find('li').length);
   var card;
@@ -216,9 +203,6 @@ function populateModal(cardDB, id, target) {
   });
 }
 $(function() {
-
-  // Load cards from external JSON file
-  var cardDB = loadCards();
 
   $('.organon-card-holder').on('click', function() {
     $(this).find('.organon-card').addClass('flipped');
